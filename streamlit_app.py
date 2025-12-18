@@ -28,8 +28,8 @@ if ingredients_list:
 
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
-        smoothiefruit_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-        sd_tf = st.daraframe(data=smoothieroot_response.json(), use_container_width=True)
+        smoothieroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        sd_tf = st.dataframe(data=smoothieroot_response.json(), use_container_width=True)
 
     # SQL insert statement
     my_insert_stmt = f"""
