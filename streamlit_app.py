@@ -25,7 +25,7 @@ ingredients_list = st.multiselect(
 if ingredients_list:
     ingredients_string = ''
 
-    for fruit_chosen in ingredient_list:
+    for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
         sd_tf = st.daraframe(data=smoothieroot_response.json(), use_container_width=True)
